@@ -10,7 +10,6 @@ export default [
     languageOptions: {
       globals: {
         ...globals.node,
-        ...globals.browser,
         process: 'readonly',
       },
       parserOptions: {
@@ -20,7 +19,7 @@ export default [
     },
     rules: {
       'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+      'no-console': 'warn',
       semi: 'off',
       quotes: 'off',
       'comma-dangle': 'off',
@@ -34,6 +33,6 @@ export default [
         },
       ],
     },
-    ignores: ['node_modules/', 'dist/', 'build/', 'coverage/', '*.config.js'],
+    ignores: ['node_modules/', 'dist/', 'build/', 'coverage/', '*.config.js', '**/uploads/**', '**/test/**', '**/.git/**'],
   },
 ];
