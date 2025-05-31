@@ -9,5 +9,13 @@
     "node": true,
     "es6": true,
     "jest": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "max-len": ["error", { "code": 350 }],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "import/extensions": "off",
+    "no-underscore-dangle": ["error", { "allow": [] }]
   }
 }
