@@ -133,3 +133,8 @@ dist/
 *.backup
 *.sublime-workspace
 *.sublime-project
+eslint.config.js
+.prettierignore
+.eslintignore
+.dockerignore
+eslint.config.js
