@@ -8,7 +8,7 @@
 
 ## Ручная установка:
 
-###Для Express.js проекта:
+### Для Express.js проекта:
 
 curl -L https://raw.githubusercontent.com/your-org/project-configs/main/eslint/express/eslint.config.js -o ./eslint.config.js
 
