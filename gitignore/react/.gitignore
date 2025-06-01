@@ -1,0 +1,7 @@
+node_modules
+build
+tsconfig.json
+.DS_Store
+.env
+.vscode
+.eslintrc.json
