@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",
+      "module": "ESNext",
+      "lib": ["ES2022", "DOM", "DOM.Iterable"],
+      "jsx": "react-jsx",
+      "moduleResolution": "NodeNext",
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "strictBindCallApply": true,
+      "strictPropertyInitialization": true,
+      "noImplicitThis": true,
+      "alwaysStrict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedIndexedAccess": true,
+      "baseUrl": "./src",
+      "paths": {
+        "@/*": ["./*"],
+        "@components/*": ["components/*"],
+        "@utils/*": ["utils/*"]
+      },
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "incremental": true,
+      "composite": true,
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
+      "jsxImportSource": "@emotion/react"
+    },
+    "include": ["src/**/*", "types/**/*"],
+    "exclude": [
+      "node_modules",
+      "dist",
+      "build",
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      "**/__tests__/**",
+      "**/__mocks__/**"
+    ]
+  }
