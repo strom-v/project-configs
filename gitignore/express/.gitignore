@@ -1,6 +1,8 @@
-.vscode
 node_modules
+eslint.config.js
+package-lock.json
+.vscode
 .dockerignore
 .env
 .prettierignore
-package-lock.json
+.DS_Store
