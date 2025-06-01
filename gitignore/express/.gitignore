@@ -1,0 +1,6 @@
+.vscode
+node_modules
+.dockerignore
+.env
+.prettierignore
+package-lock.json
