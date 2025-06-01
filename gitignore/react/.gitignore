@@ -1,8 +1,8 @@
 node_modules
 build
-eslint.config.js
+eslint.config.ts
 package-lock.json
-tsconfig.json
+tsconfig.ts
 .DS_Store
 .env
 .vscode
