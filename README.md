@@ -1,19 +1,4 @@
-### Репозиторий содержит стандартные конфигурационные файлы для проектов, обеспечивающие единообразие настроек ESLint, Prettier, VSCode, Docker
-
-### Структура репозитория
-
-config-repo/
-├── eslint/
-│ ├── express/
-│ │ └── eslint.config.js
-│ ├── react/
-│ └── vue/
-├── vscode/
-│ └── settings.json
-├── .gitignore
-├── .dockerignore
-├── .prettierrc
-└── .prettierignore
+## Репозиторий содержит стандартные конфигурационные файлы для проектов, обеспечивающие единообразие настроек ESLint, Prettier, VSCode, Docker
 
 ### Автоматическая установка (рекомендуется)
 
