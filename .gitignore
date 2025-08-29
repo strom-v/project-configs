@@ -1,10 +1,12 @@
 node_modules
 build
-eslint.config.ts
-.vscode
 package-lock.json
 tsconfig.ts
+.DS_Store
 .env
+.vscode
 .dockerignore
 .prettierignore
 .prettierrc
+eslint.config.js
+/dist
