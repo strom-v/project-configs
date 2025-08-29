@@ -1,39 +1,44 @@
-@ -1,38 +0,0 @@
 import js from '@eslint/js';
+import ts from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import globals from 'globals';
-import eslintPluginImport from 'eslint-plugin-import';
 export default [
   js.configs.recommended,
   {
-    plugins: {
-      import: eslintPluginImport,
-    },
+    files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
     languageOptions: {
       globals: {
+        ...globals.browser,
         ...globals.node,
-        process: 'readonly',
+        ...globals.es2021,
       },
+    },
+  },
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
       },
     },
-    rules: {
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' }],
-      'no-console': 'warn',
-      semi: 'off',
-      quotes: 'off',
-      'comma-dangle': 'off',
-      'arrow-parens': 'off',
-      'import/extensions': ['error', 'ignorePackages'],
-      'import/order': [
-        'error',
-        {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          'newlines-between': 'always',
-        },
-      ],
+    plugins: {
+      '@typescript-eslint': ts,
     },
-    ignores: ['node_modules/', 'dist/', 'build/', 'coverage/', '*.config.js', '**/uploads/**', '**/test/**', '**/.git/**'],
+    rules: {
+      ...ts.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/consistent-type-imports': 'warn',
+    },
+  },
+  {
+    files: ['**/*.js', '**/*.jsx'],
+    rules: {
+      'no-unused-vars': 'error',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+    },
   },
 ];
