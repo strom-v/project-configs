@@ -10,3 +10,5 @@ tsconfig.ts
 .prettierrc
 eslint.config.js
 /dist
+/logs
+/backup
